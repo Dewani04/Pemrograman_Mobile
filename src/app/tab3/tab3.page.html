@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> <b> Data RPL MEDAN</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+ <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Refreshing...">
+  </ion-refresher-content>
+</ion-refresher>
+
+<ion-card *ngFor="let rekayasa of rekayasas">
+  <ion-card color="secondary">
+  <ion-card-header>
+    <ion-card-title>{{rekayasa.nama}}</ion-card-title>
+    <ion-card-subtitle>Nim: {{rekayasa.nim}}, Tanggal Lahir: {{rekayasa.tgl_lahir}}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Status: {{rekayasa.statuss}},
+    Email: {{rekayasa.email}},
+    No Hp/Wa: {{rekayasa.nomorwa}}
+  </ion-card-content>
+
+  <ion-card-content>
+    Favorite Girl Boy: {{rekayasa.favoritegirlboy}},
+    Jenis Kelamin: {{rekayasa.jenis_kelamin}},
+  </ion-card-content>
+  </ion-card>
+</ion-card>
+
+
+
+<ion-infinite-scroll  (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>

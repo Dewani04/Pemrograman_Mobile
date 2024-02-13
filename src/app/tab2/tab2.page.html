@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title>Registrasi Rekayasa</ion-title>
+  <ion-buttons slot="start">
+  <ion-back-button></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+ </ion-header>
+ 
+ <ion-content padding>
+  <ion-card class="welcome-card bg-content">
+  <ion-card-header>
+  <ion-card-title color="primary">Registrasi Rekayasa</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+  <p>Silakan isikan form dibawah untuk pendataan Rekayasa!.</p>
+  <ion-list>
+  <ion-item>
+  <ion-label position="floating"> Nama Lengkap </ion-label>
+  <ion-input type="text" [(ngModel)]="nama"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label position="floating"> Nim </ion-label>
+  <ion-input type="text" [(ngModel)]="nim"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label position="floating"> Tanggal Lahir </ion-label>
+  <ion-input type="text" [(ngModel)]="tgl_lahir"></ion-input>     
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> Status </ion-label>
+    <ion-select [(ngModel)]="statuss" placeholder="Pilih statuss">
+    <ion-select-option value="single">Single</ion-select-option>
+    <ion-select-option value="berdua">Berdua</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> Email </ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>     
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> Nomor HP/WA </ion-label>
+    <ion-input type="text" [(ngModel)]="nomorwa"></ion-input>
+  </ion-item>
+ <ion-item>
+  <ion-label position="floating"> Favorite Girl Boy </ion-label>
+  <ion-select [(ngModel)]="favoritegirlboy" placeholder="favoritegirlboy">
+  <ion-select-option value="Amalia sohibah">Amalia sohibah</ion-select-option> 
+  <ion-select-option value="Dewani">Dewani</ion-select-option>
+  <ion-select-option value="Dewi suhartini">Dewi suhartini</ion-select-option>
+  <ion-select-option value="Firmansyah">Firmansyah</ion-select-option>
+  <ion-select-option value="Lola">Lola</ion-select-option>
+  <ion-select-option value="khomaria">Khomari</ion-select-option>
+  <ion-select-option value="Putri natali">putri natali</ion-select-option>
+  <ion-select-option value="Rio gunawan">Rio gunawan</ion-select-option>
+  <ion-select-option value="kristof">kristof</ion-select-option>
+  <ion-select-option value="yensi">yensi</ion-select-option>
+  <ion-select-option value="trifena">trifena</ion-select-option>
+  <ion-select-option value="yanti">yanti</ion-select-option>
+  <ion-select-option value="yafao">yafao</ion-select-option>
+  <ion-select-option value="richand">richand</ion-select-option>
+  <ion-select-option value="wulansari">wulansari</ion-select-option>
+   </ion-select>
+   </ion-item>
+    <ion-item>
+ <ion-label position="floating"> Jenis Kelamin </ion-label>
+   <ion-select [(ngModel)]="jenis_kelamin" placeholder="jenis_kelamin">
+   <ion-select-option value="Laki-laki">laki-laki</ion-select-option>
+   <ion-select-option value="Perempuan">perempuan</ion-select-option>
+   </ion-select>
+   </ion-item>
+   
+   </ion-list>
+   <div padding>
+   <ion-button expand="block" color="primary" size="medium"
+  (click)="addRegister()"><ion-icon name="trending-up-outline"></ion-icon>
+  Daftar</ion-button>
+   
+   </div>
+   </ion-card-content> 
+   </ion-card>
+</ion-content>

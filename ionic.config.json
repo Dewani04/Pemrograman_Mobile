@@ -1,0 +1,7 @@
+{
+  "name": "RPL",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
